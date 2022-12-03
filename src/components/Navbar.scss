@@ -1,0 +1,284 @@
+:root {
+  --button-primary: #00b289;
+  --button-secondary: #fff;
+  --text-primary: #4c4d5f;
+  --text-secondary: #f8db62;
+}
+
+h3,
+p {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+}
+
+.navbar1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  box-shadow: 1px 1px 10px rgb(205, 205, 205);
+}
+
+.navbar1__options {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 40px;
+
+    li {
+      list-style: none;
+      margin: 0px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        font-size: 1.1rem;
+        color: gray;
+        text-decoration: none;
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+.navbar1__auth-buttons {
+  display: flex;
+  button {
+    padding: 10px 3px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin: 0px 5px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  button:nth-child(1) {
+    background-color: var(--button-secondary);
+    color: var(--button-primary);
+    width: 85px;
+    border: 1px solid var(--button-primary);
+  }
+
+  button:nth-child(2) {
+    width: 114px;
+    color: var(--button-secondary);
+    background-color: var(--button-primary);
+  }
+
+  button:hover:nth-child(1) {
+    background-color: var(--button-primary);
+    color: var(--button-secondary);
+  }
+
+  button:hover:nth-child(2) {
+    filter: brightness(90%);
+  }
+}
+
+.navbar1__product {
+  position: relative;
+
+  .navbar1__product-menu {
+    position: absolute;
+    left: -100%;
+    top: 25px;
+    height: fit-content;
+    z-index: 1000;
+    display: flex;
+    // transition: all 0.5s ease;
+  }
+
+  .navbar1__product-left-menu {
+    background-color: white;
+    height: fit-content;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 1px 1px 10px rgb(205, 205, 205);
+
+    .product-menu {
+      display: flex;
+      align-items: center;
+      width: 350px;
+    }
+
+    .product-menu-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      row-gap: 2;
+      padding-bottom: 0px;
+      padding-top: 10px;
+      padding-left: 40px;
+      padding-right: 10px;
+      // transition: all 1s ease;
+    }
+
+    .product-menu-item-text {
+      border-bottom: 2px solid rgb(239, 239, 239);
+      padding-bottom: 20px;
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 15px 0px;
+        color: var(--text-primary);
+      }
+      p {
+        font-size: 1.15rem;
+        margin: 15px 0px;
+        color: gray;
+      }
+    }
+
+    .product-right-icon {
+      margin-left: 4px;
+    }
+  }
+
+  .navbar1__product-right-menu {
+    position: relative;
+    background-color: white;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
+    box-shadow: 1px 1px 10px rgb(205, 205, 205);
+    // transition: all 0.5s ease;
+
+    .product-right-menu-item {
+      width: 272px;
+      height: 75px;
+      padding: 15px;
+      display: flex;
+      cursor: pointer;
+      color: gray;
+
+      h3 {
+        color: black;
+      }
+    }
+
+    .product-right-menu-item:hover {
+      background-color: rgb(241, 241, 241);
+    }
+  }
+}
+
+.navbar1__template {
+  position: relative;
+  .navbar1__template-menu {
+    padding: 20px 0px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    position: absolute;
+    top: 25px;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 1px 1px 10px rgb(205, 205, 205);
+
+    .navbar1__template-left-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .navbar1__template-left-menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        width: 308px;
+        margin: 10px 0px;
+        cursor: pointer;
+
+        .navbar1__template-left-menu-item-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .navbar1__template-left-menu-item-box-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          h3 {
+            font-size: 1rem;
+            color: gray;
+          }
+        }
+      }
+    }
+    .navbar1__template-right-menu {
+      .navbar1__template-right-menu-title {
+        margin: 20px;
+      }
+
+      // background-color: white;
+      padding: 10px 20px;
+
+      .navbar1__template-right-menu-options {
+        width: 350px;
+        .navbar1__template-right-menu-option {
+          text-align: center;
+          cursor: pointer;
+          padding: 30px 20px;
+          border: 1px solid gray;
+          margin: 12px 0px;
+          a {
+            color: gray;
+          }
+        }
+      }
+
+      .navbar1__template-right-menu-option:nth-child(1) {
+        background-image: url(https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/61937382e5d4af7188bd59be_Templates%20Menu%20BG%201.svg);
+      }
+
+      .navbar1__template-right-menu-option:nth-child(2) {
+        background-image: url(https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/61937380050a805000b2e855_Template%20Menu%20BG%202.svg);
+      }
+
+      .navbar1__template-right-menu-option:nth-child(3) {
+        background-image: url(https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/6193738264b7edeae50ca308_Templates%20Menu%20BG%203.svg);
+      }
+
+      .navbar1__template-right-menu-option:nth-child(4) {
+        background-image: url(https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/61937380050a805000b2e855_Template%20Menu%20BG%202.svg);
+      }
+
+      .navbar1__template-right-menu-option:hover {
+        transform: scale(1.05);
+      }
+
+      .all-templates-option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.non-active {
+  opacity: 0;
+  pointer-events: none;
+}
